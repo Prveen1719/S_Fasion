@@ -1,23 +1,31 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/styles';
 import Card1 from '../Components/Cards/Card1'
-import places from './Static/Places';
+import services from './Static/Places';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        height: '100vh',
+        minHeight: 250,
         display: 'flex',
-        margin: 10,
+        flexWrap: 'wrap',
+        justifyContent: 'center',
+        alignItems: 'center',
     },
 }));
 
 export default function Services() {
-
     const classes = useStyles();
+
     return (
         <div className={classes.root}>
-            <Card1 place={places[0]}/>
-            <Card1 place={places[1]}/>
+            <Card1 place={services[0]}/>
+            <Card1 place={services[1]}/>
+            <Card1 place={services[2]}/>
+            <Card1 place={services[3]}/>
+            <Card1 place={services[4]}/>
+            <Card1 place={services[5]}/>
+            <Card1 place={services[6]}/>
+            <Card1 place={services[7]}/>
         </div>
     )
 }

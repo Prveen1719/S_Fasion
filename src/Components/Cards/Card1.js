@@ -8,8 +8,9 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles({
   root: {
     maxWidth: 290,
-    maxHeight: 390,
+    height: 380,
     background: 'rgba(0,0,0,0.5)',
+    margin: '20px',
   },
   media: {
     height: 140,
@@ -27,6 +28,7 @@ const useStyles = makeStyles({
   },
 });
 
+// create static objects to store service data in a seperate file and import data from it.
 export default function Card1( {place}) {
   const classes = useStyles();
 
@@ -34,12 +36,14 @@ export default function Card1( {place}) {
     <Card className={classes.root}>
         <CardMedia
           className={classes.media}
-          image= {place.imageUrl}
+          // importing images from static file
+          image= {place.imageUrl} 
           title="Contemplative Reptile"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2" className={classes.title}>
-            {place.title}
+          {/* importing the title by {place.title} */}
+            {place.title} 
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p" className={classes.desc}>
             {place.desc}

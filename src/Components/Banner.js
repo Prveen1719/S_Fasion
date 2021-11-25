@@ -30,18 +30,21 @@ export default function Banner() {
 
     const classes = useStyles();
     const [checked, setChecked] = useState(false);
+    // using react use effect property
     useEffect(() => {
         setChecked(true);
-    }, []);
+    }, []); 
     return (
         <div className={classes.root}>
 
         {/* using material ui transitions to make animated title */}
-        <Collapse in={checked} {...(checked ? { timeout: 1000 } : {})} collapsedHeight={40}> 
+        <Collapse in={checked} {...(checked ? { timeout: 1300 } : {})} collapsedHeight={30}> 
             <h1 className={classes.title}>
                 Welcome to <br />
                 <span className={classes.colortext}>Fashion-S</span>
             </h1>
+
+            {/* Icon button to godown */}
             <IconButton>
                 <ExpandMoreIcon className={classes.goDown} />
             </IconButton>
