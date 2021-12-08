@@ -1,0 +1,201 @@
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+section::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+}
+.container{
+    position: relative;
+    min-width: 1100px;
+    min-height: 550px;
+    display: flex;
+    z-index: 1000;
+    
+}
+
+.container .contact_info{
+    position: absolute;
+    top: 40px;
+    width: 350px;
+    height: calc(100% - 80px);
+    background: #095a55;
+    z-index: 1;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 1 20px 25px rgba(0,0,0,0.15);
+}
+
+.container .contact_info h2{
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+.container .contact_info ul .info{
+    position: relative;
+    margin: 20px 0;
+    
+
+}
+
+.container .contact_info ul.info li{
+    position: relative;
+    list-style: none;
+    display: flex;
+    margin: 20px 0;
+    cursor: pointer;
+    align-items: flex-start;
+    bottom: 50px;
+}
+
+.container .contact_info ul.info li span:nth-child(1){
+    width: 30px;
+    min-width: 30px;
+    color: #fff;
+}
+
+.container .contact_info ul.info li span:nth-child(2){
+    margin-left: 10px;
+    color: #fff;
+    font-weight: 300px;
+}
+
+.container .contact_info ul.social{
+    position: relative;
+    display: flex;
+}
+
+.container .contact_info ul.social li{
+    list-style: none;
+    margin-right: 25px;
+}
+
+.container .contact_info ul.social li a{
+    text-decoration: none;
+}
+
+.container .contact_info ul.social li span{
+    color: #fff;
+}
+
+.container .contact_form{
+    position: absolute;
+    padding: 70px 50px;
+    padding-left: 250px;
+    margin-left: 150px;
+    width: calc(100% - 150px);
+    height: 100%;
+    background: #fff;
+    box-shadow: 0 50px 50px rgba(0,0,0,0.25);
+}
+
+.container .contact_form h2{
+    color: #0f3959;
+    font-size: 24px;
+    font-weight: 500;
+
+}
+
+.container .contact_form .formContainer{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+
+.container .contact_form .formContainer .inputbox{
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.container .contact_form .formContainer .inputbox.w50{
+    width: 47%;
+}
+
+.container .contact_form .formContainer .inputbox.w100{
+    width: 100%;
+}
+
+.container .contact_form .formContainer .submitBtn input{
+    width: 100%;
+}
+
+.container .contact_form .formContainer .inputbox input,
+.container .contact_form .formContainer .inputbox textarea{
+    width: 100%;
+    resize: none;
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #333;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #777;
+}
+
+.container .contact_form .formContainer .inputbox textarea{
+    height: 125px;
+}
+
+.container .contact_form .formContainer .inputbox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    pointer-events: none;
+    font-size: 18px;
+    font-weight: 300;
+    transition: 0.3s;
+}
+
+.container .contact_form .formContainer .inputbox input:focus ~ span,
+.container .contact_form .formContainer .inputbox input:valid ~ span,
+.container .contact_form .formContainer .inputbox textarea:focus ~ span,
+.container .contact_form .formContainer .inputbox textarea:valid ~ span
+{
+    transform: translateY(-20px);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #095a55;
+    font-weight: 500;
+}
+
+.container .contact_form .formContainer .submitBtn input
+{
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    background: #095a55;
+    color: #fff;
+    border: none;
+    max-width: 150px;
+    padding: 12px;
+}
+
+.container .contact_form .formContainer .submitBtn input:hover{
+    background: #0d948b;
+}
+
+/* responsive section */
+@media (max-width : 120px){
+    .container{
+        width: 90%;
+        min-width: auto;
+        margin: 20px;
+    }
+}

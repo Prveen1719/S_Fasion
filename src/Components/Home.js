@@ -3,6 +3,7 @@ import Navbar from '../Components/NavBar/Navbar'
 import Banner from './Banner'
 import { makeStyles } from '@material-ui/styles'
 import Services from './Services'
+import Contact from '../Components/Contact/Contact'
 
 const useStyles = makeStyles((theme) => ({
     root:{
@@ -19,6 +20,7 @@ function Home() {
             <Navbar />
             <Banner />
             <Services />
+            <Contact />
         </div>
     )
 }
