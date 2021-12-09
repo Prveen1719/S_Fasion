@@ -4,6 +4,7 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
+import { Collapse } from '@material-ui/core';
 
 const useStyles = makeStyles({
   root: {
@@ -29,11 +30,12 @@ const useStyles = makeStyles({
 });
 
 // create static objects to store service data in a seperate file and import data from it.
-export default function Card1( {place}) {
+export default function Card1( {place, checked}) {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root}>
+    <Collapse in={checked} {...(checked ? { timeout: 900 } : {})}>
+    <Card className={classes.root} >
         <CardMedia
           className={classes.media}
           // importing images from static file
@@ -50,5 +52,6 @@ export default function Card1( {place}) {
           </Typography>
         </CardContent>
     </Card>
+    </Collapse>
   );
 }

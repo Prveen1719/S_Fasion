@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/styles';
 import { Collapse, IconButton } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { Link as Scroll } from 'react-scroll';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -35,19 +36,21 @@ export default function Banner() {
         setChecked(true);
     }, []); 
     return (
-        <div className={classes.root}>
+        <div className={classes.root} id="header">
 
         {/* using material ui transitions to make animated title */}
-        <Collapse in={checked} {...(checked ? { timeout: 1300 } : {})} collapsedHeight={30}> 
+        <Collapse in={checked} {...(checked ? { timeout: 1000 } : {})} collapsedHeight={30}> 
             <h1 className={classes.title}>
                 Welcome to <br />
                 <span className={classes.colortext}>Fashion-S</span>
             </h1>
 
             {/* Icon button to godown */}
+            <Scroll to="services" smooth={true}>
             <IconButton>
                 <ExpandMoreIcon className={classes.goDown} />
             </IconButton>
+            </Scroll>
         </Collapse>
         </div>
     )
